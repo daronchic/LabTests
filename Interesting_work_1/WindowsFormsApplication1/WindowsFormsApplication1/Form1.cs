@@ -15,8 +15,8 @@ namespace WindowsFormsApplication1
         public int[] uArray;
         public string[] uArrayF;
         public int uSize;
-        string ThData;
-        string ThTime;
+        string ThData; //Переменная для времени
+        string ThTime; //Переменная для даты
         int state;
         DateTime ThToday = DateTime.Now;
         public Form1()
