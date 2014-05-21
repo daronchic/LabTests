@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.output = new System.Windows.Forms.TextBox();
             this.HelpMessage = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.ManualInput = new System.Windows.Forms.TextBox();
@@ -38,9 +39,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.output = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +67,16 @@
             this.groupBox1.Size = new System.Drawing.Size(320, 236);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // output
+            // 
+            this.output.Location = new System.Drawing.Point(7, 120);
+            this.output.Multiline = true;
+            this.output.Name = "output";
+            this.output.ReadOnly = true;
+            this.output.Size = new System.Drawing.Size(304, 110);
+            this.output.TabIndex = 3;
+            this.output.Visible = false;
             // 
             // HelpMessage
             // 
@@ -137,16 +148,6 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Состояние:";
             // 
-            // output
-            // 
-            this.output.Location = new System.Drawing.Point(7, 120);
-            this.output.Multiline = true;
-            this.output.Name = "output";
-            this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(304, 110);
-            this.output.TabIndex = 3;
-            this.output.Visible = false;
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -157,15 +158,22 @@
             this.checkBox1.Text = "Активировать вывод в файл";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // button1
             // 
-
+            this.button1.Location = new System.Drawing.Point(13, 206);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 269);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.radioButton2);
@@ -175,6 +183,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "by Roman";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -198,6 +207,7 @@
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
